@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-content {
@@ -54,6 +55,7 @@
   background-clip: text;
   animation: gradientShift 8s ease infinite;
   background-size: 200% 200%;
+  padding-bottom: 0.2em;
 }
 
 .hero-subtitle {
@@ -133,26 +135,26 @@
 }
 
 .skill-badge:nth-child(1) {
-  top: 10%;
-  left: 10%;
+  top: 15%;
+  left: 8%;
   animation-duration: 18s;
 }
 
 .skill-badge:nth-child(2) {
-  top: 20%;
-  right: 15%;
+  top: 15%;
+  right: 8%;
   animation-duration: 22s;
 }
 
 .skill-badge:nth-child(3) {
-  top: 60%;
-  left: 8%;
+  top: 25%;
+  left: 15%;
   animation-duration: 25s;
 }
 
 .skill-badge:nth-child(4) {
-  bottom: 15%;
-  right: 10%;
+  top: 25%;
+  right: 15%;
   animation-duration: 20s;
 }
 
@@ -163,45 +165,51 @@
 }
 
 .skill-badge:nth-child(6) {
-  top: 15%;
-  right: 8%;
+  top: 40%;
+  right: 5%;
   animation-duration: 19s;
 }
 
 .skill-badge:nth-child(7) {
-  bottom: 25%;
+  top: 55%;
   left: 12%;
   animation-duration: 21s;
 }
 
 .skill-badge:nth-child(8) {
-  top: 70%;
-  right: 20%;
+  top: 55%;
+  right: 12%;
   animation-duration: 24s;
 }
 
 .skill-badge:nth-child(9) {
-  bottom: 35%;
-  right: 8%;
+  top: 70%;
+  left: 18%;
   animation-duration: 22s;
 }
 
 .skill-badge:nth-child(10) {
-  top: 30%;
-  left: 15%;
+  top: 70%;
+  right: 18%;
   animation-duration: 20s;
 }
 
 .skill-badge:nth-child(11) {
-  bottom: 10%;
-  left: 20%;
+  top: 80%;
+  left: 10%;
   animation-duration: 23s;
 }
 
 .skill-badge:nth-child(12) {
-  top: 50%;
-  right: 5%;
+  top: 80%;
+  right: 10%;
   animation-duration: 21s;
+}
+
+.skill-badge:nth-child(13) {
+  top: 60%;
+  left: 25%;
+  animation-duration: 19s;
 }
 
 .skill-badge:hover {

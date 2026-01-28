@@ -49,6 +49,7 @@
   overflow: hidden;
   transition: all 0.4s ease;
   cursor: pointer;
+  cursor: pointer;
 }
 
 .project-card:hover {

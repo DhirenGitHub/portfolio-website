@@ -1,36 +1,17 @@
 .all-projects-page {
   min-height: 100vh;
   background: #1a1a1a;
-  padding: 2rem;
-}
-
-.back-btn {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
-  padding: 0.8rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 100;
-}
-
-.back-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateX(-5px);
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .all-projects-container {
   max-width: 1000px;
   margin: 0 auto;
   padding-top: 4rem;
+  padding-bottom: 2rem;
+  width: 100%;
 }
 
 .page-title {
@@ -58,6 +39,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .project-item {

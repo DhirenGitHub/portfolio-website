@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import './AllProjects.css'
 
 const AllProjects = () => {
@@ -68,9 +70,7 @@ const AllProjects = () => {
 
   return (
     <div className="all-projects-page">
-      <button className="back-btn" onClick={() => navigate('/')}>
-        ← Back to Home
-      </button>
+      <Navbar />
 
       <div className="all-projects-container">
         <h1 className="page-title">All Projects</h1>
@@ -96,11 +96,17 @@ const AllProjects = () => {
                   </span>
                 ))}
               </div>
-              <button className="view-details-btn">View Details →</button>
+              <button
+                className="view-details-btn"
+                onClick={() => navigate(`/projects/${project.id}`)}
+              >
+                View Details →
+              </button>
             </div>
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

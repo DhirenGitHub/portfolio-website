@@ -3,17 +3,18 @@ import './Hero.css'
 const Hero = () => {
   const skills = [
     { name: 'React', icon: '⚛️', color: '#61dafb' },
-    { name: 'TypeScript', icon: '📘', color: '#3178c6' },
-    { name: 'Node.js', icon: '🟢', color: '#68a063' },
     { name: 'Python', icon: '🐍', color: '#3776ab' },
-    { name: 'Docker', icon: '🐳', color: '#2496ed' },
-    { name: 'AWS', icon: '☁️', color: '#ff9900' },
-    { name: 'MongoDB', icon: '🍃', color: '#47a248' },
-    { name: 'GraphQL', icon: '◈', color: '#e10098' },
+    { name: 'JavaScript', icon: '💛', color: '#f7df1e' },
+    { name: 'AI', icon: '🤖', color: '#ff6b6b' },
     { name: 'Git', icon: '📦', color: '#f05032' },
     { name: 'API', icon: '🔌', color: '#00d8ff' },
+    { name: 'scikit-learn', icon: '🔬', color: '#f89939' },
+    { name: 'RAG', icon: '🧠', color: '#9b59b6' },
     { name: 'SQL', icon: '🗄️', color: '#4479a1' },
-    { name: 'Linux', icon: '🐧', color: '#fcc624' },
+    { name: 'Node.js', icon: '🟢', color: '#68a063' },
+    { name: 'Azure', icon: '☁️', color: '#0078d4' },
+    { name: 'TypeScript', icon: '📘', color: '#3178c6' },
+    { name: 'C', icon: '©️', color: '#a8b9cc' },
   ]
 
   return (
@@ -30,10 +31,6 @@ const Hero = () => {
             <br />
             From frontend to backend, from databases to deployment.
           </p>
-          <div className="hero-cta">
-            <button className="cta-primary">View My Work</button>
-            <button className="cta-secondary">Get In Touch</button>
-          </div>
         </div>
       </div>
 

@@ -1,0 +1,42 @@
+.footer {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+  .footer {
+    background: #f0f0f0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-text {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+}

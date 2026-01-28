@@ -45,6 +45,7 @@ const FeaturedProjects = () => {
               key={project.id}
               className="project-card"
               style={{ '--card-color': project.color } as React.CSSProperties & { '--card-color': string }}
+              onClick={() => navigate(`/projects/${project.id}`)}
             >
               <div className="project-number">{index + 1}</div>
               <div className="project-image-container" style={{ backgroundColor: project.color }}>
