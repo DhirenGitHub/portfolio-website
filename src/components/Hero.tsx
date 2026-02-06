@@ -35,19 +35,21 @@ const Hero = () => {
       </div>
 
       <div className="floating-skills">
-        {[...skills, ...skills].map((skill, index) => (
-          <div
-            key={`${skill.name}-${index}`}
-            className="skill-badge"
-            style={{
-              animationDelay: `${index * 0.2}s`,
-              '--skill-color': skill.color,
-            } as React.CSSProperties & { '--skill-color': string }}
-          >
-            <span className="skill-icon">{skill.icon}</span>
-            <span className="skill-name">{skill.name}</span>
-          </div>
-        ))}
+        <div className="skills-track">
+          {[...skills, ...skills].map((skill, index) => (
+            <div
+              key={`${skill.name}-${index}`}
+              className="skill-badge"
+              style={{
+                animationDelay: `${index * 0.2}s`,
+                '--skill-color': skill.color,
+              } as React.CSSProperties & { '--skill-color': string }}
+            >
+              <span className="skill-icon">{skill.icon}</span>
+              <span className="skill-name">{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="hero-background">

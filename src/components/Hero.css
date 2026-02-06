@@ -117,6 +117,11 @@
   pointer-events: none;
 }
 
+.skills-track {
+  position: absolute;
+  inset: 0;
+}
+
 .skill-badge {
   position: absolute;
   display: flex;
@@ -344,17 +349,15 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    height: auto;
     min-height: 100vh;
-    max-height: none;
-    padding: 6rem 1rem 2rem;
+    padding: 1rem 1rem 1rem;
     flex-direction: column;
   }
 
@@ -376,13 +379,19 @@
 
   .floating-skills {
     position: relative;
-    display: flex;
-    gap: 0.8rem;
     padding: 1.5rem 0;
     margin-top: 1rem;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); */
+    /* -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); */
+  }
+
+  .skills-track {
+    position: static;
+    display: flex;
+    gap: 0.8rem;
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
   }
 
   .skill-badge {
@@ -390,7 +399,7 @@
     font-size: 0.75rem;
     padding: 0.4rem 0.8rem;
     flex-shrink: 0;
-    animation: scrollLeft 20s linear infinite !important;
+    animation: none !important;
   }
 
   .skill-badge:nth-child(n + 10) {
@@ -412,24 +421,8 @@
     font-size: 0.9rem;
   }
 
-  .gradient-orb {
-    filter: blur(60px);
-    opacity: 0.1;
-  }
-
-  .orb-1 {
-    width: 250px;
-    height: 250px;
-  }
-
-  .orb-2 {
-    width: 200px;
-    height: 200px;
-  }
-
-  .orb-3 {
-    width: 180px;
-    height: 180px;
+  .hero-background {
+    display: none;
   }
 }
 
