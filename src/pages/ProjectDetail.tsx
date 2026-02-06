@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './ProjectDetail.css'
@@ -21,6 +21,7 @@ interface Project {
 const ProjectDetail = () => {
   const { id } = useParams()
   const navigate = useNavigate()
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -30,65 +31,75 @@ const ProjectDetail = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Project Alpha',
-      description: 'A comprehensive web application built with React and Node.js.',
+      title: 'Sri Lanka Road Network Status',
+      description: "A real-time platform for tracking road infrastructure damage across Sri Lanka's national road network.",
       fullDescription:
-        'Project Alpha is a full-stack web application that demonstrates modern web development practices. Built with React for the frontend and Node.js for the backend, it features real-time data synchronization using Socket.io, secure user authentication with JWT tokens, and a fully responsive design that works seamlessly across all devices. The application implements best practices for security, performance, and scalability.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+        "Sri Lanka Road Network Status is a real-time public information system for tracking road infrastructure damage across Sri Lanka's national road network. The platform displays road closures, damage reports, and traffic disruptions caused by natural disasters such as flooding, landslides, washouts, collapses, and blockages. It enables citizens to plan travel routes effectively and helps authorities coordinate repair efforts. The platform covers all 9 provinces with national (A/B roads) and provincial road data, with damage classification and severity levels from low to critical. Road damage data is provided by the Ministry of Transport, Highways and Urban Development through the Road Development Authority (RDA).",
+      technologies: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'Leaflet', 'Hono', 'Cloudflare Workers', 'Cloudflare D1', 'Drizzle ORM'],
       year: '2024',
-      category: 'Web Development',
-      githubUrl: 'https://github.com/yourusername/project-alpha',
-      liveUrl: 'https://project-alpha-demo.com',
-      images: ['🎨', '💻', '🚀'],
+      category: 'Full-Stack Development',
+      githubUrl: 'https://github.com/open-build-lk/rda-status',
+      liveUrl: 'https://road-lk.org/',
+      images: [
+        new URL('../assets/projects/road-lk/landing-page.png', import.meta.url).href,
+        new URL('../assets/projects/road-lk/citizens-report.png', import.meta.url).href,
+        new URL('../assets/projects/road-lk/unverified-reports.png', import.meta.url).href,
+      ],
       features: [
-        'Real-time data updates with WebSocket integration',
-        'JWT-based authentication and authorization',
-        'Responsive design optimized for mobile and desktop',
-        'RESTful API with comprehensive documentation',
-        'MongoDB database with optimized queries',
-        'Automated testing with Jest and React Testing Library',
+        'Real-time damage visualization with interactive map showing blocked and damaged road segments',
+        'Damage classification by type: flooding, landslides, washouts, collapses, and blockages',
+        'Severity level indicators from low to critical for informed decision-making',
+        'Complete coverage of all 9 provinces with national (A/B roads) and provincial road data',
+        'Integration with official Road Development Authority (RDA) data sources',
+        'Edge deployment on Cloudflare Workers for ultra-fast global access',
+        'Responsive design optimized for mobile and desktop viewing',
+        'Free and unlimited map usage with Leaflet and OpenStreetMap',
       ],
     },
     {
       id: 2,
-      title: 'Project Beta',
-      description: 'Enterprise-level TypeScript application with robust backend infrastructure.',
+      title: 'WikiRacer',
+      description: 'A semantic Wikipedia navigator that finds paths between any two Wikipedia articles using AI-powered embeddings.',
       fullDescription:
-        'Project Beta showcases enterprise-grade application architecture with TypeScript throughout the entire stack. The backend implements advanced caching strategies using Redis, database query optimization with PostgreSQL, and follows clean architecture principles. This project demonstrates professional development practices including comprehensive testing, CI/CD pipelines, and production-ready deployment strategies.',
-      technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Redis'],
+        'WikiRacer automatically navigates from one Wikipedia page to another by analyzing links and using semantic similarity to choose the best path. It uses sentence transformer embeddings to understand the meaning of link text and find connections that are semantically related to the target page. For example, navigating from "Potato" to "Goat" might follow a path like: Potato → Chicken → Rice → Dairy → Goat. The algorithm scrapes all Wikipedia article links from the current page, creates semantic embeddings using all-MiniLM-L6-v2, finds the link most semantically similar to the target page name, and navigates to that page repeating until the target is found.',
+      technologies: ['Python', 'ChromaDB', 'Sentence Transformers', 'BeautifulSoup', 'WebSockets', 'Requests'],
       year: '2024',
-      category: 'Backend Development',
-      githubUrl: 'https://github.com/yourusername/project-beta',
-      liveUrl: 'https://project-beta-demo.com',
-      images: ['⚙️', '🗄️', '⚡'],
+      category: 'AI & Machine Learning',
+      githubUrl: 'https://github.com/DhirenGitHub/wikiracer',
+      images: [
+        new URL('../assets/projects/wiki-racer/vizualizer.png', import.meta.url).href,
+        new URL('../assets/projects/wiki-racer/cmd-view.png', import.meta.url).href,
+      ],
       features: [
-        'Type-safe backend with TypeScript',
-        'Redis caching for improved performance',
-        'PostgreSQL with advanced query optimization',
-        'RESTful API following OpenAPI specification',
-        'Comprehensive error handling and logging',
-        'Docker containerization for easy deployment',
+        'Semantic navigation using AI embeddings (sentence-transformers) to find semantically similar links',
+        'Vector database storage with ChromaDB for fast similarity search',
+        'Loop prevention by tracking visited pages to avoid infinite loops',
+        'Live visualization with optional browser-based demo mode showing real-time navigation with highlighted links',
+        'Path logging that tracks and displays the complete path taken',
+        'Configurable depth limit to control maximum navigation steps',
       ],
     },
     {
       id: 3,
-      title: 'Project Gamma',
-      description: 'Cloud-native application deployed on AWS.',
+      title: 'Fourier Sketch',
+      description: 'Draw curves with your mouse and instantly get their parametric equations using Fourier transforms.',
       fullDescription:
-        'Project Gamma is a cloud-native application built from the ground up to leverage AWS services. It features automated CI/CD pipelines, auto-scaling capabilities, and load balancing to handle high traffic efficiently. The infrastructure is defined as code using AWS CloudFormation, making it reproducible and version-controlled. This project demonstrates expertise in cloud architecture, DevOps practices, and scalable system design.',
-      technologies: ['Vue.js', 'Python', 'AWS', 'Docker'],
-      year: '2023',
-      category: 'Cloud & DevOps',
-      githubUrl: 'https://github.com/yourusername/project-gamma',
-      liveUrl: 'https://project-gamma-demo.com',
-      images: ['☁️', '🐋', '🔧'],
+        'Fourier Sketch is an interactive visualization tool that converts hand-drawn curves into parametric equations using Discrete Fourier Transform (DFT). Draw any curve with your mouse and watch as epicycles (rotating circles) reconstruct your drawing in real-time. The program applies DFT to both x and y coordinates separately, then visualizes the result using epicycles - circles rotating at different frequencies that combine to recreate any periodic function. The parametric equation is automatically generated and copied to your clipboard, demonstrating a fundamental concept in Fourier analysis.',
+      technologies: ['Python', 'Pygame', 'DFT', 'Pyperclip'],
+      year: '2024',
+      category: 'Mathematics & Visualization',
+      githubUrl: 'https://github.com/DhirenGitHub/fourier-sketch',
+      images: [
+        new URL('../assets/projects/fourier-sketch/epicycles.png', import.meta.url).href,
+        new URL('../assets/projects/fourier-sketch/equation_generated.png', import.meta.url).href,
+      ],
       features: [
-        'Deployed on AWS with EC2, S3, and RDS',
-        'Automated CI/CD pipeline with GitHub Actions',
-        'Docker containerization for consistent environments',
-        'Auto-scaling based on traffic patterns',
-        'CloudWatch monitoring and alerting',
-        'Infrastructure as Code with CloudFormation',
+        'Interactive drawing interface - click and drag to draw any curve',
+        'Real-time epicycle visualization showing rotating circles reconstructing your drawing',
+        'Automatic parametric equation generation copied to clipboard',
+        'Custom DFT implementation decomposing curves into 51 frequency components',
+        'Visual representation of Fourier analysis concepts',
+        'Coordinate transformation from screen to mathematical coordinate system',
       ],
     },
     {
@@ -190,11 +201,33 @@ const ProjectDetail = () => {
 
         <div className="project-images-section">
           {project.images.map((image, index) => (
-            <div key={index} className="project-image-card">
-              <span className="project-image-emoji">{image}</span>
+            <div
+              key={index}
+              className="project-image-card"
+              onClick={() => {
+                if (image.startsWith('/') || image.startsWith('http') || image.startsWith('blob:')) {
+                  setSelectedImage(image)
+                }
+              }}
+              style={{ cursor: (image.startsWith('/') || image.startsWith('http') || image.startsWith('blob:')) ? 'pointer' : 'default' }}
+            >
+              {image.startsWith('/') || image.startsWith('http') || image.startsWith('blob:') ? (
+                <img src={image} alt={`${project.title} screenshot ${index + 1}`} className="project-image" />
+              ) : (
+                <span className="project-image-emoji">{image}</span>
+              )}
             </div>
           ))}
         </div>
+
+        {selectedImage && (
+          <div className="image-modal" onClick={() => setSelectedImage(null)}>
+            <div className="image-modal-content">
+              <button className="image-modal-close" onClick={() => setSelectedImage(null)}>×</button>
+              <img src={selectedImage} alt="Enlarged view" className="image-modal-img" />
+            </div>
+          </div>
+        )}
 
         <div className="project-links-section">
           <a

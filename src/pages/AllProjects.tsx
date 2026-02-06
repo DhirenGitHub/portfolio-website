@@ -3,6 +3,9 @@ import { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './AllProjects.css'
+import roadLkImage from '../assets/projects/road-lk/landing-page.png'
+import wikiRacerImage from '../assets/projects/wiki-racer/vizualizer.png'
+import fourierSketchImage from '../assets/projects/fourier-sketch/epicycles.png'
 
 const AllProjects = () => {
   const navigate = useNavigate()
@@ -14,30 +17,33 @@ const AllProjects = () => {
   const allProjects = [
     {
       id: 1,
-      title: 'Project Alpha',
+      title: 'Sri Lanka Road Network Status',
       description:
-        'A comprehensive web application built with React and Node.js. Features real-time data updates, user authentication, and a modern responsive design.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+        "A real-time platform for tracking road infrastructure damage across Sri Lanka's national road network. Displays road closures, damage reports, and traffic disruptions caused by natural disasters.",
+      technologies: ['React 19', 'TypeScript', 'Cloudflare Workers', 'Leaflet', 'Tailwind CSS'],
       year: '2024',
-      category: 'Web Development',
+      category: 'Full-Stack Development',
+      image: roadLkImage,
     },
     {
       id: 2,
-      title: 'Project Beta',
+      title: 'WikiRacer',
       description:
-        'Enterprise-level TypeScript application with robust backend infrastructure. Implements advanced caching strategies and database optimization.',
-      technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Redis'],
+        'A semantic Wikipedia navigator that finds paths between any two Wikipedia articles using AI-powered embeddings and vector similarity search.',
+      technologies: ['Python', 'ChromaDB', 'Sentence Transformers', 'BeautifulSoup', 'WebSockets'],
       year: '2024',
-      category: 'Backend Development',
+      category: 'AI & Machine Learning',
+      image: wikiRacerImage,
     },
     {
       id: 3,
-      title: 'Project Gamma',
+      title: 'Fourier Sketch',
       description:
-        'Cloud-native application deployed on AWS with automated CI/CD pipeline. Handles high traffic with auto-scaling and load balancing.',
-      technologies: ['Vue.js', 'Python', 'AWS', 'Docker'],
-      year: '2023',
-      category: 'Cloud & DevOps',
+        'An interactive visualization tool that converts hand-drawn curves into parametric equations using Discrete Fourier Transform. Watch epicycles reconstruct your drawing in real-time.',
+      technologies: ['Python', 'Pygame', 'DFT', 'Pyperclip'],
+      year: '2024',
+      category: 'Mathematics & Visualization',
+      image: fourierSketchImage,
     },
     {
       id: 4,
@@ -81,27 +87,36 @@ const AllProjects = () => {
         <div className="projects-list">
           {allProjects.map((project) => (
             <div key={project.id} className="project-item">
-              <div className="project-header">
-                <div className="project-meta">
-                  <span className="project-year">{project.year}</span>
-                  <span className="project-category">{project.category}</span>
+              <div className="project-item-content">
+                <div className="project-info">
+                  <div className="project-header">
+                    <div className="project-meta">
+                      <span className="project-year">{project.year}</span>
+                      <span className="project-category">{project.category}</span>
+                    </div>
+                    <h2 className="project-item-title">{project.title}</h2>
+                  </div>
+                  <p className="project-item-description">{project.description}</p>
+                  <div className="project-item-technologies">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="tech-badge">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <button
+                    className="view-details-btn"
+                    onClick={() => navigate(`/projects/${project.id}`)}
+                  >
+                    View Details →
+                  </button>
                 </div>
-                <h2 className="project-item-title">{project.title}</h2>
+                {project.image && (
+                  <div className="project-item-image">
+                    <img src={project.image} alt={project.title} />
+                  </div>
+                )}
               </div>
-              <p className="project-item-description">{project.description}</p>
-              <div className="project-item-technologies">
-                {project.technologies.map((tech) => (
-                  <span key={tech} className="tech-badge">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <button
-                className="view-details-btn"
-                onClick={() => navigate(`/projects/${project.id}`)}
-              >
-                View Details →
-              </button>
             </div>
           ))}
         </div>

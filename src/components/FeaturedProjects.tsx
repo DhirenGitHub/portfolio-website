@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import './FeaturedProjects.css'
+import roadLkImage from '../assets/projects/road-lk/landing-page.png'
+import wikiRacerImage from '../assets/projects/wiki-racer/vizualizer.png'
+import fourierSketchImage from '../assets/projects/fourier-sketch/epicycles.png'
 
 const FeaturedProjects = () => {
   const navigate = useNavigate()
@@ -7,27 +10,27 @@ const FeaturedProjects = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: 'Project Alpha',
-      description: "It's a long established fact that a reader will be distracted by the readable content of a page.",
-      image: '1',
-      color: '#E89BA7',
-      technologies: ['React', 'Node.js', 'MongoDB'],
+      title: 'Sri Lanka Road Network Status',
+      description: "A real-time platform for tracking road infrastructure damage across Sri Lanka's national road network, enabling citizens to plan travel routes.",
+      image: roadLkImage,
+      color: '#2563eb',
+      technologies: ['React', 'TypeScript', 'Cloudflare Workers', 'Leaflet'],
     },
     {
       id: 2,
-      title: 'Project Beta',
-      description: "It's a long established fact that a reader will be distracted by the readable content of a page.",
-      image: '2',
-      color: '#F4A261',
-      technologies: ['TypeScript', 'Express', 'PostgreSQL'],
+      title: 'WikiRacer',
+      description: "A semantic Wikipedia navigator that finds paths between any two Wikipedia articles using AI-powered embeddings.",
+      image: wikiRacerImage,
+      color: '#9b59b6',
+      technologies: ['Python', 'ChromaDB', 'Sentence Transformers'],
     },
     {
       id: 3,
-      title: 'Project Gamma',
-      description: "It's a long established fact that a reader will be distracted by the readable content of a page.",
-      image: '3',
-      color: '#4A90E2',
-      technologies: ['Vue.js', 'Python', 'AWS'],
+      title: 'Fourier Sketch',
+      description: "Draw curves with your mouse and instantly get their parametric equations using Fourier transforms.",
+      image: fourierSketchImage,
+      color: '#e74c3c',
+      technologies: ['Python', 'Pygame', 'DFT'],
     },
   ]
 
@@ -49,9 +52,13 @@ const FeaturedProjects = () => {
             >
               <div className="project-number">{index + 1}</div>
               <div className="project-image-container" style={{ backgroundColor: project.color }}>
-                <div className="project-image-placeholder">
-                  <span className="project-icon">📄</span>
-                </div>
+                {typeof project.image === 'string' && (project.image.startsWith('http') || project.image.includes('.png') || project.image.includes('.jpg')) ? (
+                  <img src={project.image} alt={project.title} className="project-card-image" />
+                ) : (
+                  <div className="project-image-placeholder">
+                    <span className="project-icon">📄</span>
+                  </div>
+                )}
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
