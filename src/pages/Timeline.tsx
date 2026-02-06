@@ -6,6 +6,7 @@ import scratchOnlineImage from '../assets/timeline/2016-scratch-online.png'
 import googleCertificate from '../assets/timeline/2021 SEPT - Google certification.jpeg'
 import foundationForGoodness from '../assets/timeline/2023 Jan - Foundation for Goodness.jpeg'
 import volunteerDambulla from '../assets/timeline/2022 volunteer working.png'
+import roadLK from '../assets/timeline/2025 roadlk.png'
 
 
 const Timeline = () => {
@@ -88,6 +89,16 @@ const Timeline = () => {
       description:
         'Completed an internship at Futura Labs, working on frontend development projects.',
       date: '2023 July - September',
+    },
+    {
+      id: 9,
+      year: '2025',
+      title: 'RoadLK Project',
+      description:
+        'Worked on the RoadLK project, a web application for road maintenance and management. A real-time platform for tracking road infrastructure damage across Sri Lanka\'s national road network. This platform displays road closures, damage reports, and traffic disruptions caused by natural disasters, enabling citizens to plan travel routes and authorities to coordinate repair efforts.',
+      hasImage: true,
+      image: roadLK,
+      date: '2025 November - December',
     },
   ]
 
