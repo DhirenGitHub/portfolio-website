@@ -19,7 +19,7 @@ const ContactPreview = () => {
               <span className="contact-icon">📧</span>
               <div className="contact-details">
                 <span className="contact-label">Email</span>
-                <span className="contact-value">dhiren@example.com</span>
+                <span className="contact-value">dhirenharindu@gmail.com</span>
               </div>
             </div>
 
@@ -27,7 +27,7 @@ const ContactPreview = () => {
               <span className="contact-icon">📍</span>
               <div className="contact-details">
                 <span className="contact-label">Location</span>
-                <span className="contact-value">Available Worldwide</span>
+                <span className="contact-value">Malaysia / Sri Lanka</span>
               </div>
             </div>
 

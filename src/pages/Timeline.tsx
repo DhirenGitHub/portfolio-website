@@ -5,6 +5,7 @@ import './Timeline.css'
 import scratchOnlineImage from '../assets/timeline/2016-scratch-online.png'
 import googleCertificate from '../assets/timeline/2021 SEPT - Google certification.jpeg'
 import foundationForGoodness from '../assets/timeline/2023 Jan - Foundation for Goodness.jpeg'
+import volunteerDambulla from '../assets/timeline/2022 volunteer working.png'
 
 
 const Timeline = () => {
@@ -62,6 +63,16 @@ const Timeline = () => {
     },
     {
       id: 6,
+      year: '2022',
+      title: 'Volunteer work - School in Lenodara, Dambulla',
+      description:
+        'Volunteered at ඇතා බැදි වැව කනිශ්ට විදුහල in Lenodara, Dambulla, teaching basic computer skills and programming concepts to students.',
+      hasImage: true,
+      image: volunteerDambulla,
+      date: '2022 June',
+    },
+    {
+      id: 7,
       year: '2023',
       title: 'Volunteer work - Foundation for Goodness',
       description:
@@ -71,7 +82,7 @@ const Timeline = () => {
       date: '2023 January',
     },
     {
-      id: 7,
+      id: 8,
       year: '2023',
       title: 'Futura Labs Internship - Frontend Developer',
       description:

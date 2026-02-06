@@ -12,26 +12,26 @@ const Contact = () => {
     {
       iconType: 'email',
       label: 'Email',
-      value: 'dhiren@example.com',
-      link: 'mailto:dhiren@example.com',
+      value: 'dhirenharindu@gmail.com',
+      link: 'mailto:dhirenharindu@gmail.com',
     },
     {
       iconType: 'linkedin',
       label: 'LinkedIn',
-      value: 'linkedin.com/in/dhirenpurasinghe',
-      link: 'https://linkedin.com/in/dhirenpurasinghe',
+      value: 'Dhiren Purasinghe',
+      link: 'https://www.linkedin.com/in/dhiren-purasinghe-8aa59b2b8/',
     },
     {
       iconType: 'github',
       label: 'GitHub',
-      value: 'github.com/dhirenpurasinghe',
-      link: 'https://github.com/dhirenpurasinghe',
+      value: 'DhirenGitHub',
+      link: 'https://github.com/DhirenGitHub',
     },
     {
       iconType: 'twitter',
       label: 'Twitter',
-      value: '@dhirenpurasinghe',
-      link: 'https://twitter.com/dhirenpurasinghe',
+      value: '@DhirenPura ',
+      link: 'https://x.com/DhirenPura',
     },
   ]
 
