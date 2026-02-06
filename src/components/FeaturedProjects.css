@@ -177,7 +177,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .featured-projects {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
+    min-height: auto;
   }
 
   .projects-grid {
@@ -194,21 +195,38 @@
     margin-bottom: 2rem;
   }
 
+  .project-card:hover {
+    transform: none;
+  }
+
   .project-image-container {
-    height: 200px;
+    height: 180px;
   }
 
   .project-image-placeholder {
-    width: 140px;
-    height: 180px;
+    width: 120px;
+    height: 150px;
   }
 
   .project-icon {
     font-size: 3rem;
   }
 
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-content {
+    padding: 1.2rem;
+  }
+
   .see-all-btn {
     padding: 0.8rem 2rem;
     font-size: 0.95rem;
+    width: 100%;
   }
 }

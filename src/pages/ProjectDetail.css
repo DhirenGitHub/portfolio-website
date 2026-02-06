@@ -11,6 +11,7 @@
   margin: 0 auto;
   padding: 8rem 2rem 4rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .back-button {
@@ -335,47 +336,93 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-detail-container {
-    padding: 6rem 1.5rem 3rem;
+    padding: 5rem 1rem 2rem;
   }
 
   .project-detail-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .project-short-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .project-images-section {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-image-card {
+    min-height: 180px;
   }
 
   .project-image-emoji {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .project-links-section {
     flex-direction: column;
+    margin-bottom: 2rem;
   }
 
   .project-link {
     width: 100%;
     justify-content: center;
+    padding: 0.8rem 1.5rem;
+    box-sizing: border-box;
   }
 
   .content-block {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 15px;
   }
 
   .section-heading {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .project-full-description {
+    font-size: 0.95rem;
+  }
+
+  .feature-item {
+    font-size: 0.95rem;
   }
 
   .tech-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .tech-item {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .project-content-section {
+    gap: 2rem;
   }
 
   .project-not-found h1 {
     font-size: 2rem;
+  }
+
+  .project-meta-badges {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail-title {
+    font-size: 1.6rem;
+  }
+
+  .back-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .project-header-section {
+    margin-bottom: 2rem;
   }
 }

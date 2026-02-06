@@ -175,18 +175,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .all-projects-page {
-    padding: 1rem;
-  }
-
-  .back-btn {
-    top: 1rem;
-    left: 1rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    padding-top: 70px;
   }
 
   .all-projects-container {
-    padding-top: 3rem;
+    padding: 2rem 1rem;
   }
 
   .page-title {
@@ -196,10 +189,11 @@
   .page-subtitle {
     font-size: 0.95rem;
     margin-bottom: 2rem;
+    padding: 0 0.5rem;
   }
 
   .project-item {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .project-item-content {
@@ -215,15 +209,51 @@
     max-height: 200px;
   }
 
+  .project-item:hover {
+    transform: none;
+  }
+
   .project-item-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .project-item-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-item-technologies {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-badge {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
   }
 
   .projects-list {
     gap: 1.5rem;
+  }
+
+  .view-details-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item-title {
+    font-size: 1.2rem;
+  }
+
+  .project-meta {
+    gap: 0.5rem;
+  }
+
+  .project-year,
+  .project-category {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
   }
 }

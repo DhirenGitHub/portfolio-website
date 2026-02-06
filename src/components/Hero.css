@@ -212,6 +212,11 @@
   animation-duration: 19s;
 }
 
+/* Hide duplicate badges on desktop (used for mobile marquee) */
+.skill-badge:nth-child(n + 14) {
+  display: none;
+}
+
 .skill-badge:hover {
   background: rgba(255, 255, 255, 0.95);
   border-color: var(--skill-color);
@@ -334,37 +339,110 @@
   }
 }
 
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    padding: 1rem;
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    padding: 6rem 1rem 2rem;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .title-separator {
+    width: 120px;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .floating-skills {
+    position: relative;
+    display: flex;
+    gap: 0.8rem;
+    padding: 1.5rem 0;
+    margin-top: 1rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
 
   .skill-badge {
-    font-size: 0.7rem;
+    position: static;
+    font-size: 0.75rem;
     padding: 0.4rem 0.8rem;
+    flex-shrink: 0;
+    animation: scrollLeft 20s linear infinite !important;
+  }
+
+  .skill-badge:nth-child(n + 10) {
+    display: flex;
+  }
+
+  .skill-badge:nth-child(n + 14) {
+    display: flex;
   }
 
   .skill-icon {
     font-size: 1rem;
-  }
-
-  /* Hide some badges on mobile for cleaner look */
-  .skill-badge:nth-child(n + 7) {
-    display: none;
+    animation: none;
   }
 
   .cta-primary,
   .cta-secondary {
     padding: 0.8rem 1.8rem;
     font-size: 0.9rem;
+  }
+
+  .gradient-orb {
+    filter: blur(60px);
+    opacity: 0.1;
+  }
+
+  .orb-1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .orb-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .orb-3 {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 5rem 0.5rem 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
   }
 }

@@ -35,9 +35,9 @@ const Hero = () => {
       </div>
 
       <div className="floating-skills">
-        {skills.map((skill, index) => (
+        {[...skills, ...skills].map((skill, index) => (
           <div
-            key={skill.name}
+            key={`${skill.name}-${index}`}
             className="skill-badge"
             style={{
               animationDelay: `${index * 0.2}s`,

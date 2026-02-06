@@ -271,7 +271,7 @@
   }
 
   .contact-hero {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .contact-section {
@@ -279,23 +279,68 @@
   }
 
   .section-heading {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .contact-method {
-    padding: 1.2rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .contact-method:hover {
+    transform: none;
   }
 
   .method-icon {
-    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .method-value {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  .method-label {
+    font-size: 0.75rem;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .skill-item {
+    padding: 0.7rem;
+    font-size: 0.85rem;
   }
 
   .resume-card,
   .availability-card {
     padding: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding-top: 60px;
+  }
+
+  .method-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .method-arrow {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
