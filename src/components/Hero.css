@@ -21,7 +21,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 50%, #3d5a7f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,8 +31,8 @@
 
 .name-highlight {
   display: block;
-  color: #ffffff;
-  -webkit-text-fill-color: #667eea;
+  color: #1e3a5f;
+  -webkit-text-fill-color: #1e3a5f;
   background: none;
   font-weight: 900;
 }
@@ -40,7 +40,7 @@
 .title-separator {
   width: 200px;
   height: 3px;
-  background: rgba(200, 200, 200, 0.4);
+  background: rgba(30, 58, 95, 0.4);
   margin: 1rem auto;
   border-radius: 2px;
 }
@@ -49,7 +49,7 @@
   display: block;
   font-size: 0.5em;
   font-weight: 600;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 50%, #3d5a7f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 
 .hero-subtitle {
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(26, 26, 46, 0.7);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -87,25 +87,25 @@
 }
 
 .cta-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
   color: white;
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 10px 30px rgba(30, 58, 95, 0.4);
 }
 
 .cta-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 15px 40px rgba(30, 58, 95, 0.6);
 }
 
 .cta-secondary {
   background: transparent;
-  color: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: rgba(26, 26, 46, 0.9);
+  border: 2px solid rgba(30, 58, 95, 0.3);
 }
 
 .cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(30, 58, 95, 0.1);
+  border-color: rgba(30, 58, 95, 0.6);
   transform: translateY(-3px);
 }
 
@@ -123,13 +123,13 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(30, 58, 95, 0.1);
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(26, 26, 46, 0.9);
   animation: float 20s ease-in-out infinite;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
@@ -213,7 +213,7 @@
 }
 
 .skill-badge:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.95);
   border-color: var(--skill-color);
   box-shadow: 0 0 20px var(--skill-color);
   pointer-events: auto;
@@ -240,14 +240,14 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.3;
+  opacity: 0.15;
   animation: orbFloat 20s ease-in-out infinite;
 }
 
 .orb-1 {
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
   top: -10%;
   left: -10%;
   animation-duration: 25s;
@@ -256,7 +256,7 @@
 .orb-2 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #3d5a7f 0%, #4d6a8f 100%);
   bottom: -10%;
   right: -10%;
   animation-duration: 30s;
@@ -265,7 +265,7 @@
 .orb-3 {
   width: 350px;
   height: 350px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #2d4a6f 0%, #3d5a7f 100%);
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -331,37 +331,6 @@
   50% {
     opacity: 0.5;
     transform: scaleX(1.05);
-  }
-}
-
-/* Light mode support */
-@media (prefers-color-scheme: light) {
-  .hero-subtitle {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .skill-badge {
-    background: rgba(255, 255, 255, 0.8);
-    color: rgba(0, 0, 0, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .skill-badge:hover {
-    background: rgba(255, 255, 255, 0.95);
-  }
-
-  .cta-secondary {
-    color: rgba(0, 0, 0, 0.8);
-    border-color: rgba(0, 0, 0, 0.3);
-  }
-
-  .cta-secondary:hover {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .gradient-orb {
-    opacity: 0.15;
   }
 }
 

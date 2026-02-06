@@ -13,7 +13,7 @@ const FeaturedProjects = () => {
       title: 'Sri Lanka Road Network Status',
       description: "A real-time platform for tracking road infrastructure damage across Sri Lanka's national road network, enabling citizens to plan travel routes.",
       image: roadLkImage,
-      color: '#2563eb',
+      color: '#1e3a5f',
       technologies: ['React', 'TypeScript', 'Cloudflare Workers', 'Leaflet'],
     },
     {
@@ -21,7 +21,7 @@ const FeaturedProjects = () => {
       title: 'WikiRacer',
       description: "A semantic Wikipedia navigator that finds paths between any two Wikipedia articles using AI-powered embeddings.",
       image: wikiRacerImage,
-      color: '#9b59b6',
+      color: '#2d4a6f',
       technologies: ['Python', 'ChromaDB', 'Sentence Transformers'],
     },
     {
@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
       title: 'Fourier Sketch',
       description: "Draw curves with your mouse and instantly get their parametric equations using Fourier transforms.",
       image: fourierSketchImage,
-      color: '#e74c3c',
+      color: '#3d5a7f',
       technologies: ['Python', 'Pygame', 'DFT'],
     },
   ]

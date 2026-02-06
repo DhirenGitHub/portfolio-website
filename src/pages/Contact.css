@@ -1,6 +1,6 @@
 .contact-page {
   min-height: 100vh;
-  background: #1a1a1a;
+  background: #f8f8f8;
   padding-top: 80px;
 }
 
@@ -19,7 +19,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 50%, #3d5a7f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -27,7 +27,7 @@
 
 .contact-page-subtitle {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(26, 26, 46, 0.7);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -45,7 +45,7 @@
 .section-heading {
   font-size: 1.8rem;
   font-weight: 700;
-  color: white;
+  color: #1a1a2e;
   margin-bottom: 1.5rem;
 }
 
@@ -59,8 +59,8 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border: 1px solid rgba(30, 58, 95, 0.1);
   border-radius: 15px;
   padding: 1.5rem;
   text-decoration: none;
@@ -68,10 +68,10 @@
 }
 
 .contact-method:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(102, 126, 234, 0.5);
+  background: white;
+  border-color: rgba(30, 58, 95, 0.3);
   transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(30, 58, 95, 0.1);
 }
 
 .method-icon {
@@ -81,14 +81,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(30, 58, 95, 0.1);
   border-radius: 12px;
-  color: #667eea;
+  color: #1e3a5f;
   transition: all 0.3s ease;
 }
 
 .contact-method:hover .method-icon {
-  background: rgba(102, 126, 234, 0.2);
+  background: rgba(30, 58, 95, 0.2);
   transform: scale(1.05);
 }
 
@@ -101,7 +101,7 @@
 
 .method-label {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(26, 26, 46, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -109,18 +109,18 @@
 
 .method-value {
   font-size: 1.1rem;
-  color: white;
+  color: #1a1a2e;
   font-weight: 600;
 }
 
 .method-arrow {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(26, 26, 46, 0.3);
   transition: all 0.3s ease;
 }
 
 .contact-method:hover .method-arrow {
-  color: #667eea;
+  color: #1e3a5f;
   transform: translateX(5px);
 }
 
@@ -132,7 +132,7 @@
 
 .about-text {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(26, 26, 46, 0.7);
   line-height: 1.7;
 }
 
@@ -143,26 +143,26 @@
 }
 
 .skill-item {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border: 1px solid rgba(30, 58, 95, 0.1);
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
   font-weight: 600;
-  color: white;
+  color: #1a1a2e;
   transition: all 0.3s ease;
 }
 
 .skill-item:hover {
-  background: rgba(102, 126, 234, 0.1);
-  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(30, 58, 95, 0.1);
+  border-color: rgba(30, 58, 95, 0.3);
   transform: translateY(-3px);
 }
 
 .resume-card,
 .availability-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border: 1px solid rgba(30, 58, 95, 0.1);
   border-radius: 20px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -171,10 +171,10 @@
 
 .resume-card:hover,
 .availability-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(102, 126, 234, 0.5);
+  background: white;
+  border-color: rgba(30, 58, 95, 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(30, 58, 95, 0.1);
 }
 
 .resume-icon {
@@ -185,13 +185,13 @@
 .resume-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: #1a1a2e;
   margin-bottom: 1rem;
 }
 
 .resume-description {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(26, 26, 46, 0.7);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -199,7 +199,7 @@
 .download-resume-btn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -207,12 +207,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(30, 58, 95, 0.3);
 }
 
 .download-resume-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 8px 20px rgba(30, 58, 95, 0.5);
 }
 
 .status-indicator {
@@ -250,72 +250,8 @@
 
 .availability-text {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(26, 26, 46, 0.7);
   line-height: 1.6;
-}
-
-/* Light mode support */
-@media (prefers-color-scheme: light) {
-  .contact-page {
-    background: #f5f5f5;
-  }
-
-  .contact-page-subtitle {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .section-heading {
-    color: #1a1a1a;
-  }
-
-  .contact-method {
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .contact-method:hover {
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .method-label {
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  .method-value {
-    color: #1a1a1a;
-  }
-
-  .about-text {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .skill-item {
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #1a1a1a;
-  }
-
-  .resume-card,
-  .availability-card {
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .resume-card:hover,
-  .availability-card:hover {
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .resume-title {
-    color: #1a1a1a;
-  }
-
-  .resume-description,
-  .availability-text {
-    color: rgba(0, 0, 0, 0.7);
-  }
 }
 
 /* Responsive Design */

@@ -4,9 +4,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(26, 26, 26, 0.5);
+  background: rgba(248, 248, 248, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(30, 58, 95, 0.1);
   padding: 1rem 2rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .nav-logo {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 10px;
@@ -29,7 +29,7 @@
 
 .nav-logo:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(30, 58, 95, 0.4);
 }
 
 .logo-text {
@@ -48,7 +48,7 @@
 .nav-link {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(26, 26, 46, 0.7);
   font-size: 1rem;
   font-weight: 600;
   padding: 0.6rem 1.2rem;
@@ -59,13 +59,13 @@
 }
 
 .nav-link:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
+  color: #1a1a2e;
+  background: rgba(30, 58, 95, 0.05);
 }
 
 .nav-link.active {
-  color: #667eea;
-  background: rgba(102, 126, 234, 0.1);
+  color: #1e3a5f;
+  background: rgba(30, 58, 95, 0.1);
 }
 
 .nav-link.active::after {
@@ -76,12 +76,12 @@
   transform: translateX(-50%);
   width: 30px;
   height: 2px;
-  background: #667eea;
+  background: #1e3a5f;
   border-radius: 2px;
 }
 
 .nav-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 100%);
   color: white;
   border: none;
   padding: 0.7rem 1.5rem;
@@ -90,34 +90,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(30, 58, 95, 0.3);
 }
 
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
-}
-
-/* Light mode support */
-@media (prefers-color-scheme: light) {
-  .navbar {
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-link {
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  .nav-link:hover {
-    color: #1a1a1a;
-    background: rgba(0, 0, 0, 0.05);
-  }
-
-  .nav-link.active {
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.1);
-  }
+  box-shadow: 0 8px 20px rgba(30, 58, 95, 0.5);
 }
 
 /* Mobile responsive */

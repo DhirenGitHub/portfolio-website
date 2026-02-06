@@ -6,6 +6,9 @@ import './AllProjects.css'
 import roadLkImage from '../assets/projects/road-lk/landing-page.png'
 import wikiRacerImage from '../assets/projects/wiki-racer/vizualizer.png'
 import fourierSketchImage from '../assets/projects/fourier-sketch/epicycles.png'
+import tetrisImage from '../assets/projects/tetris/single_player.png'
+import srtfImage from '../assets/projects/srtf/MulltiThread.png'
+import asciiImage from '../assets/projects/mp4-to-ascii/ascii.png'
 
 const AllProjects = () => {
   const navigate = useNavigate()
@@ -21,7 +24,7 @@ const AllProjects = () => {
       description:
         "A real-time platform for tracking road infrastructure damage across Sri Lanka's national road network. Displays road closures, damage reports, and traffic disruptions caused by natural disasters.",
       technologies: ['React 19', 'TypeScript', 'Cloudflare Workers', 'Leaflet', 'Tailwind CSS'],
-      year: '2024',
+      year: '2025',
       category: 'Full-Stack Development',
       image: roadLkImage,
     },
@@ -31,7 +34,7 @@ const AllProjects = () => {
       description:
         'A semantic Wikipedia navigator that finds paths between any two Wikipedia articles using AI-powered embeddings and vector similarity search.',
       technologies: ['Python', 'ChromaDB', 'Sentence Transformers', 'BeautifulSoup', 'WebSockets'],
-      year: '2024',
+      year: '2025',
       category: 'AI & Machine Learning',
       image: wikiRacerImage,
     },
@@ -47,30 +50,33 @@ const AllProjects = () => {
     },
     {
       id: 4,
-      title: 'Project Delta',
+      title: 'Tetris Game',
       description:
-        'Mobile-first progressive web app with offline capabilities. Implements service workers and advanced caching for optimal performance.',
-      technologies: ['React', 'PWA', 'IndexedDB', 'Service Workers'],
-      year: '2023',
-      category: 'Mobile Development',
+        'A feature-complete Tetris implementation with ghost piece system, two-player mode, level progression, and comprehensive audio. Built as university coursework with 149 passing tests.',
+      technologies: ['Java', 'JavaFX', 'Maven', 'JUnit'],
+      year: '2025',
+      category: 'Game Development',
+      image: tetrisImage,
     },
     {
       id: 5,
-      title: 'Project Epsilon',
+      title: 'SRTF Multithreaded Scheduler',
       description:
-        'Machine learning powered analytics dashboard. Provides real-time insights and predictive analytics for business intelligence.',
-      technologies: ['Python', 'TensorFlow', 'Flask', 'React'],
-      year: '2023',
-      category: 'AI & Machine Learning',
+        'A Shortest Remaining Time First CPU scheduler using multithreading. Each process runs as a worker thread with cross-platform support for Windows and POSIX systems.',
+      technologies: ['C', 'Pthreads', 'Windows API', 'Multithreading'],
+      year: '2025',
+      category: 'Systems Programming',
+      image: srtfImage,
     },
     {
       id: 6,
-      title: 'Project Zeta',
+      title: 'MP4 to ASCII',
       description:
-        'E-commerce platform with secure payment integration. Features inventory management, order tracking, and customer analytics.',
-      technologies: ['Next.js', 'Stripe', 'MongoDB', 'Tailwind CSS'],
-      year: '2023',
-      category: 'E-commerce',
+        'A Python-based ASCII video player that converts any video into ASCII art and plays it in your terminal with synchronized audio. Inspired by the legendary Bad Apple meme.',
+      technologies: ['Python', 'OpenCV', 'FFmpeg', 'ANSI'],
+      year: '2025',
+      category: 'Media & Visualization',
+      image: asciiImage,
     },
   ]
 
