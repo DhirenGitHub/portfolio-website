@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './FeaturedProjects.css'
 import roadLkImage from '../assets/projects/road-lk/landing-page.png'
-import wikiRacerImage from '../assets/projects/wiki-racer/vizualizer.png'
+import aegisWafImage from '../assets/projects/aegis-waf/main-img.png'
 import fourierSketchImage from '../assets/projects/fourier-sketch/epicycles.png'
 
 const FeaturedProjects = () => {
@@ -17,12 +17,12 @@ const FeaturedProjects = () => {
       technologies: ['React', 'TypeScript', 'Cloudflare Workers', 'Leaflet'],
     },
     {
-      id: 2,
-      title: 'WikiRacer',
-      description: "A semantic Wikipedia navigator that finds paths between any two Wikipedia articles using AI-powered embeddings.",
-      image: wikiRacerImage,
-      color: '#2d4a6f',
-      technologies: ['Python', 'ChromaDB', 'Sentence Transformers'],
+      id: 7,
+      title: 'Aegis AI WAF',
+      description: "An advanced AI-powered Web Application Firewall that protects LLMs from prompt injection, jailbreaking, and adversarial attacks using multi-layered AI reasoning.",
+      image: aegisWafImage,
+      color: '#1a2f4a',
+      technologies: ['Python', 'CAMEL-AI', 'NeMo Guardrails', 'FastAPI'],
     },
     {
       id: 3,

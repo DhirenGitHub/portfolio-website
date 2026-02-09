@@ -176,6 +176,34 @@ const ProjectDetail = () => {
         'Cross-platform support for Windows, macOS, and Linux',
       ],
     },
+    {
+      id: 7,
+      title: 'Aegis AI WAF',
+      description: 'An advanced AI-powered Web Application Firewall that protects LLMs from prompt injection, jailbreaking, and adversarial attacks.',
+      fullDescription:
+        'Aegis is an advanced AI-powered Web Application Firewall (WAF) designed to protect large language models (LLMs) and their applications from sophisticated attacks such as prompt injection, jailbreaking, and adversarial instructions. It employs a multi-layered, tiered AI reasoning architecture to efficiently classify and neutralize threats while minimizing latency for legitimate requests. Aegis operates on a principle of "fast pass-through for safe prompts, deeper AI reasoning for suspicious ones." Layer 1 (Fast Scanner) performs rapid checks using regex and heuristics in ~10ms. Layer 2 (Intent Classifier) uses a NeMo-based classifier leveraging Llama Guard 3 logic to generate a risk score. Tiered routing then directs prompts: low-risk prompts pass through, medium-risk undergo light CAMEL verification, and high-risk prompts get full multi-agent analysis. Layer 3 (CAMEL Verification) uses specialized agents — Intent Analyst, Policy Auditor, Tool-Risk Auditor, Adversarial Simulator, and Final Judge — to collaboratively reason on complex prompts. Layer 3.5 validates AI outputs before execution, Layer 4 generates human-readable explanations for decisions, Layer 5 continuously learns from new attack patterns, and Layer 6 monitors multi-turn session behavior for gradual escalation attacks.',
+      technologies: ['Python', 'CAMEL-AI', 'NeMo Guardrails', 'FastAPI', 'Uvicorn', 'Streamlit', 'Redis', 'PostgreSQL', 'OpenAI', 'Pydantic', 'pyre2'],
+      year: '2025',
+      category: 'AI & Cybersecurity',
+      githubUrl: 'https://github.com/DhirenGitHub/Aegis-WAF',
+      images: [
+        new URL('../assets/projects/aegis-waf/with-aegis WAF.png', import.meta.url).href,
+        new URL('../assets/projects/aegis-waf/without-aegis WAF.png', import.meta.url).href,
+        new URL('../assets/projects/aegis-waf/process.png', import.meta.url).href,
+      ],
+      features: [
+        'Multi-layered processing pipeline with 6 specialized layers for comprehensive threat detection',
+        'Tiered AI reasoning that optimizes latency — fast pass-through for safe prompts, deeper analysis only when needed',
+        'Layer 1 Fast Scanner using regex (pyre2/Hyperscan) for immediate blocking in ~10ms',
+        'NeMo-based Intent Classifier leveraging Llama Guard 3 for risk scoring within ~60ms',
+        'CAMEL-AI multi-agent verification system with specialized agents (Intent Analyst, Policy Auditor, Adversarial Simulator, Final Judge)',
+        'Output validation layer intercepting AI-generated responses before execution to prevent tool abuse and PII leaks',
+        'Explainability engine generating structured, human-readable reasoning for every block or constraint decision',
+        'Adaptive feedback loop with embeddings and novelty detection for identifying emerging threats',
+        'Session behavior monitoring for detecting multi-turn attacks and gradual privilege escalation',
+        'Interactive Streamlit dashboard for real-time monitoring of WAF decisions and metrics',
+      ],
+    },
   ]
 
   const project = projects.find((p) => p.id === Number(id))

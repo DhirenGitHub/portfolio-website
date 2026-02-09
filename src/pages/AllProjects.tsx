@@ -9,6 +9,7 @@ import fourierSketchImage from '../assets/projects/fourier-sketch/epicycles.png'
 import tetrisImage from '../assets/projects/tetris/single_player.png'
 import srtfImage from '../assets/projects/srtf/MulltiThread.png'
 import asciiImage from '../assets/projects/mp4-to-ascii/ascii.png'
+import aegisWafImage from '../assets/projects/aegis-waf/main-img.png'
 
 const AllProjects = () => {
   const navigate = useNavigate()
@@ -18,6 +19,16 @@ const AllProjects = () => {
   }, [])
 
   const allProjects = [
+    {
+      id: 7,
+      title: 'Aegis AI WAF',
+      description:
+        'An advanced AI-powered Web Application Firewall designed to protect LLMs from prompt injection, jailbreaking, and adversarial attacks. Uses a multi-layered, tiered AI reasoning architecture to classify and neutralize threats.',
+      technologies: ['Python', 'CAMEL-AI', 'NeMo Guardrails', 'FastAPI', 'Streamlit', 'Redis'],
+      year: '2025',
+      category: 'AI & Cybersecurity',
+      image: aegisWafImage,
+    },
     {
       id: 1,
       title: 'Sri Lanka Road Network Status',
