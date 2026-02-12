@@ -69,16 +69,15 @@ const Contact = () => {
   const skills = [
     'React',
     'TypeScript',
-    'Node.js',
     'Python',
-    'Docker',
-    'AWS',
-    'MongoDB',
+    'Java',
+    'C',
     'PostgreSQL',
-    'GraphQL',
-    'REST APIs',
+    'Redis',
+    'OpenCV',
     'Git',
-    'Linux',
+    'Vite',
+    'Next JS',
   ]
 
   return (
